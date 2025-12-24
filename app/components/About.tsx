@@ -36,10 +36,10 @@ const About: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className={`lg:text-center transition-all duration-800 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
                     <h2 className="text-base text-primary dark:text-primary font-semibold tracking-wide uppercase">About Us</h2>
-                    <p className="mt-2 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
+                    <p className="mt-2 text-3xl font-extrabold text-foreground dark:text-foreground sm:text-4xl lg:text-5xl">
                         Why Developers Choose GesSain
                     </p>
-                    <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-300 lg:mx-auto">
+                    <p className="mt-4 text-xl text-muted-foreground dark:text-muted-foreground max-w-3xl mx-auto">
                         GesSain is designed to streamline project management for developers and teams of all sizes.
                     </p>
                 </div>

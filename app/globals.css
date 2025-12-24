@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-    --color-sage: #8BA49A;
-    --color-warm-honey: #D4A574;
-    --color-stone-white: #FAF9F6;
-    --color-deep-plantation: #2C3E36;
-    --color-deep-sage: #4A635D;
+    /* ═══════════════════════════════════════════════════════════════════════════
+       🌿 SERENE NATURE TONES - Color Palette
+       A calming, nature-inspired palette with excellent light/dark mode contrast
+       ═══════════════════════════════════════════════════════════════════════════ */
+    --color-forest-mist: #7A9E7E;
+    /* Primary: Soft forest green */
+    --color-terracotta-glow: #C4836A;
+    /* Secondary: Warm terracotta accent */
+    --color-warm-cream: #FDF8F3;
+    /* Light background: Warm cream */
+    --color-deep-forest: #1E3A2F;
+    /* Dark text / Dark mode bg base */
+    --color-moss-stone: #4D6B5A;
+    /* Muted green for accents */
 
     /* Semantic Colors Mapping */
     --color-background: hsl(var(--background));
@@ -67,95 +76,101 @@
 }
 
 /*
-  Based on Shadcn UI variables.
-  Converted "Sage & Stone" palette to HSL for compatibility with existing components using hsl(var(--...)).
+  🌿 SERENE NATURE TONES
+  A harmonious palette featuring soft forest greens, warm terracotta accents,
+  and creamy neutrals designed for excellent readability in both light and dark modes.
 */
 @layer base {
     :root {
-        /* Background: Stone White #FAF9F6 -> 45 20% 97% */
-        --background: 45 20% 97%;
+        /* Background: Warm Cream - soft and inviting */
+        --background: 35 45% 96%;
 
-        /* Foreground: Deep Plantation #2C3E36 -> 153 17% 21% */
-        --foreground: 153 17% 21%;
+        /* Foreground: Deep Forest - rich, dark green for excellent readability */
+        --foreground: 156 40% 10%;
 
-        /* Card: White or very light stone */
-        --card: 0 0% 100%;
-        --card-foreground: 153 17% 21%;
+        /* Card: Crisp white with subtle warmth */
+        --card: 40 30% 98%;
+        --card-foreground: 156 40% 10%;
 
         /* Popover */
-        --popover: 0 0% 100%;
-        --popover-foreground: 153 17% 21%;
+        --popover: 40 30% 98%;
+        --popover-foreground: 156 40% 10%;
 
-        /* Primary: Sage Green #8BA49A -> 156 14% 59% */
-        --primary: 156 14% 59%;
-        --primary-foreground: 153 17% 21%;
-        /* Dark text on sage for contrast */
+        /* Primary: Deep Forest Green - rich and bold for great contrast */
+        --primary: 152 35% 28%;
+        --primary-foreground: 0 0% 100%;
 
-        /* Secondary: Warm Honey #D4A574 -> 30 53% 64% */
-        --secondary: 30 53% 64%;
-        --secondary-foreground: 153 17% 21%;
+        /* Secondary: Rich Terracotta - warm and inviting */
+        --secondary: 16 50% 52%;
+        --secondary-foreground: 0 0% 100%;
 
-        /* Muted: Light Grayish Green */
-        --muted: 156 10% 90%;
-        --muted-foreground: 153 10% 40%;
+        /* Muted: Soft sage background with readable dark text */
+        --muted: 130 15% 90%;
+        --muted-foreground: 156 25% 35%;
 
-        /* Accent: Used for hovers, slightly darker stone */
-        --accent: 156 14% 90%;
-        --accent-foreground: 153 17% 21%;
+        /* Accent: Light moss for hovers with dark text */
+        --accent: 130 20% 88%;
+        --accent-foreground: 156 40% 10%;
 
         /* Destructive */
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
+        --destructive: 0 72% 45%;
+        --destructive-foreground: 0 0% 100%;
 
-        /* Border & Input */
-        --border: 156 14% 85%;
-        --input: 156 14% 85%;
-        --ring: 156 14% 59%;
-        /* Sage ring */
+        /* Border & Input: Visible but soft borders */
+        --border: 130 12% 75%;
+        --input: 130 12% 75%;
+        --ring: 152 35% 28%;
 
         --radius: 0.5rem;
 
-        /* Custom Charts - Fallback/Placeholder */
-        --chart-1: 156 14% 59%;
-        --chart-2: 30 53% 64%;
-        --chart-3: 153 17% 21%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
+        /* Charts: Nature-inspired data visualization with good contrast */
+        --chart-1: 152 35% 28%;
+        /* Deep Forest */
+        --chart-2: 16 50% 52%;
+        /* Rich Terracotta */
+        --chart-3: 156 40% 15%;
+        /* Darkest Forest */
+        --chart-4: 39 65% 55%;
+        /* Warm Gold */
+        --chart-5: 180 30% 40%;
+        /* Deep Eucalyptus */
     }
 
     .dark {
-        /* Background: Deep Plantation #2C3E36 */
-        --background: 153 17% 10%;
-        /* Darker than pure #2C3E36 for bg */
-        --foreground: 45 20% 97%;
+        /* Background: Deep Forest base #1E3A2F -> darker variant */
+        --background: 156 32% 8%;
+        --foreground: 30 40% 95%;
 
-        /* Card: Dark Sage */
-        --card: 153 17% 12%;
-        --card-foreground: 45 20% 97%;
+        /* Card: Slightly elevated dark surface */
+        --card: 156 28% 11%;
+        --card-foreground: 30 40% 95%;
 
-        --popover: 153 17% 12%;
-        --popover-foreground: 45 20% 97%;
+        --popover: 156 28% 11%;
+        --popover-foreground: 30 40% 95%;
 
-        /* Primary: Sage Green (Lightened for dark mode?) or keep same */
-        --primary: 156 14% 59%;
-        --primary-foreground: 153 17% 21%;
+        /* Primary: Forest Mist - slightly brighter for dark mode */
+        --primary: 127 20% 60%;
+        --primary-foreground: 156 32% 10%;
 
-        /* Secondary: Warm Honey */
-        --secondary: 30 53% 64%;
-        --secondary-foreground: 153 17% 21%;
+        /* Secondary: Terracotta - warmer glow in dark */
+        --secondary: 16 45% 62%;
+        --secondary-foreground: 156 32% 10%;
 
-        --muted: 153 17% 20%;
-        --muted-foreground: 156 10% 70%;
+        /* Muted: Deep forest muted */
+        --muted: 156 20% 16%;
+        --muted-foreground: 127 12% 65%;
 
-        --accent: 153 17% 20%;
-        --accent-foreground: 45 20% 97%;
+        /* Accent: Subtle forest highlight */
+        --accent: 156 25% 18%;
+        --accent-foreground: 30 40% 95%;
 
-        --destructive: 0 62.8% 30.6%;
+        --destructive: 0 62% 40%;
         --destructive-foreground: 0 0% 98%;
 
-        --border: 153 17% 20%;
-        --input: 153 17% 20%;
-        --ring: 156 14% 59%;
+        /* Border & Input */
+        --border: 156 20% 20%;
+        --input: 156 20% 20%;
+        --ring: 127 20% 60%;
     }
 }
 
