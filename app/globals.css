@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme {
+    --color-sage: #8BA49A;
+    --color-warm-honey: #D4A574;
+    --color-stone-white: #FAF9F6;
+    --color-deep-plantation: #2C3E36;
+    --color-deep-sage: #4A635D;
+
+    /* Semantic Colors Mapping */
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+    --color-card: hsl(var(--card));
+    --color-card-foreground: hsl(var(--card-foreground));
+    --color-popover: hsl(var(--popover));
+    --color-popover-foreground: hsl(var(--popover-foreground));
+    --color-primary: hsl(var(--primary));
+    --color-primary-foreground: hsl(var(--primary-foreground));
+    --color-secondary: hsl(var(--secondary));
+    --color-secondary-foreground: hsl(var(--secondary-foreground));
+    --color-muted: hsl(var(--muted));
+    --color-muted-foreground: hsl(var(--muted-foreground));
+    --color-accent: hsl(var(--accent));
+    --color-accent-foreground: hsl(var(--accent-foreground));
+    --color-destructive: hsl(var(--destructive));
+    --color-destructive-foreground: hsl(var(--destructive-foreground));
+    --color-border: hsl(var(--border));
+    --color-input: hsl(var(--input));
+    --color-ring: hsl(var(--ring));
+    --color-chart-1: hsl(var(--chart-1));
+    --color-chart-2: hsl(var(--chart-2));
+    --color-chart-3: hsl(var(--chart-3));
+    --color-chart-4: hsl(var(--chart-4));
+    --color-chart-5: hsl(var(--chart-5));
+
+    /* Border Radius */
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+    --animate-float: float 6s ease-in-out infinite;
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 30px, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/*
+  Based on Shadcn UI variables.
+  Converted "Sage & Stone" palette to HSL for compatibility with existing components using hsl(var(--...)).
+*/
+@layer base {
+    :root {
+        /* Background: Stone White #FAF9F6 -> 45 20% 97% */
+        --background: 45 20% 97%;
+
+        /* Foreground: Deep Plantation #2C3E36 -> 153 17% 21% */
+        --foreground: 153 17% 21%;
+
+        /* Card: White or very light stone */
+        --card: 0 0% 100%;
+        --card-foreground: 153 17% 21%;
+
+        /* Popover */
+        --popover: 0 0% 100%;
+        --popover-foreground: 153 17% 21%;
+
+        /* Primary: Sage Green #8BA49A -> 156 14% 59% */
+        --primary: 156 14% 59%;
+        --primary-foreground: 153 17% 21%;
+        /* Dark text on sage for contrast */
+
+        /* Secondary: Warm Honey #D4A574 -> 30 53% 64% */
+        --secondary: 30 53% 64%;
+        --secondary-foreground: 153 17% 21%;
+
+        /* Muted: Light Grayish Green */
+        --muted: 156 10% 90%;
+        --muted-foreground: 153 10% 40%;
+
+        /* Accent: Used for hovers, slightly darker stone */
+        --accent: 156 14% 90%;
+        --accent-foreground: 153 17% 21%;
+
+        /* Destructive */
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        /* Border & Input */
+        --border: 156 14% 85%;
+        --input: 156 14% 85%;
+        --ring: 156 14% 59%;
+        /* Sage ring */
+
+        --radius: 0.5rem;
+
+        /* Custom Charts - Fallback/Placeholder */
+        --chart-1: 156 14% 59%;
+        --chart-2: 30 53% 64%;
+        --chart-3: 153 17% 21%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+    }
+
+    .dark {
+        /* Background: Deep Plantation #2C3E36 */
+        --background: 153 17% 10%;
+        /* Darker than pure #2C3E36 for bg */
+        --foreground: 45 20% 97%;
+
+        /* Card: Dark Sage */
+        --card: 153 17% 12%;
+        --card-foreground: 45 20% 97%;
+
+        --popover: 153 17% 12%;
+        --popover-foreground: 45 20% 97%;
+
+        /* Primary: Sage Green (Lightened for dark mode?) or keep same */
+        --primary: 156 14% 59%;
+        --primary-foreground: 153 17% 21%;
+
+        /* Secondary: Warm Honey */
+        --secondary: 30 53% 64%;
+        --secondary-foreground: 153 17% 21%;
+
+        --muted: 153 17% 20%;
+        --muted-foreground: 156 10% 70%;
+
+        --accent: 153 17% 20%;
+        --accent-foreground: 45 20% 97%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 153 17% 20%;
+        --input: 153 17% 20%;
+        --ring: 156 14% 59%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Custom Utilities for Animation Delays */
+@utility animation-delay-100 {
+    animation-delay: 0.1s;
+}
+
+@utility animation-delay-200 {
+    animation-delay: 0.2s;
+}
+
+@utility animation-delay-300 {
+    animation-delay: 0.3s;
+}
+
+@utility animation-delay-400 {
+    animation-delay: 0.4s;
+}
+
+@utility animation-delay-500 {
+    animation-delay: 0.5s;
+}
+
+@utility animation-delay-600 {
+    animation-delay: 0.6s;
+}
+
+@utility animation-delay-700 {
+    animation-delay: 0.7s;
+}
+
+@utility animation-delay-800 {
+    animation-delay: 0.8s;
+}
