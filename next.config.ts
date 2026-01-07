@@ -1,9 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Image optimization with modern formats
   images: {
     qualities: [75, 85],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  // Enable gzip compression
+  compress: true,
+  // Optimize production builds
+  poweredByHeader: false,
+  // Strict mode for better React practices
+  reactStrictMode: true,
 };
 
 export default nextConfig;
