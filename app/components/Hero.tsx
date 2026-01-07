@@ -60,45 +60,6 @@ const Hero: React.FC = () => {
                 />
             </div>
 
-            {/* Add custom CSS animations */}
-            <style jsx>{`
-                @keyframes fadeInUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(30px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-                
-                @keyframes float {
-                    0%, 100% { transform: translateY(0px); }
-                    50% { transform: translateY(-10px); }
-                }
-                
-                .animate-fade-in-up {
-                    animation: fadeInUp 0.8s ease-out forwards;
-                    opacity: 0;
-                }
-                
-                .animate-float {
-                    animation: float 6s ease-in-out infinite;
-                }
-                
-                .animation-delay-200 {
-                    animation-delay: 0.2s;
-                }
-                
-                .animation-delay-400 {
-                    animation-delay: 0.4s;
-                }
-                
-                .animation-delay-600 {
-                    animation-delay: 0.6s;
-                }
-            `}</style>
         </section>
     )
 }
