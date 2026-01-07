@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 GesSain Portfolio
 
-## Getting Started
+A modern, high-performance portfolio website built with **Next.js 16** and **React 19**, featuring a nature-inspired design system with light/dark mode support.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16.1.0-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19.2.3-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.x-38B2AC?logo=tailwind-css)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- **🎨 Nature-Inspired Theme** — Serene forest greens & warm terracotta accents
+- **🌗 Dark Mode** — System preference detection + manual toggle
+- **⚡ Optimized Images** — AVIF/WebP with responsive sizing
+- **📧 Contact Form** — Server-side email via Nodemailer + Zod validation
+- **🎭 Smooth Animations** — Intersection Observer-driven fade-ins
+- **📱 Fully Responsive** — Mobile-first design approach
+
+## 🏗️ Project Structure
+
+```
+portfolio2026/
+├── app/
+│   ├── api/contact/       # Email API route
+│   ├── components/        # Page sections (Header, Hero, Features, etc.)
+│   ├── contexts/          # ThemeContext for dark mode
+│   ├── globals.css        # Design tokens & animations
+│   └── page.tsx           # Main page composition
+├── components/ui/         # Reusable UI primitives
+├── lib/
+│   ├── data.tsx           # Portfolio content data
+│   └── utils.ts           # Utility functions (cn helper)
+└── public/images/         # Project screenshots
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Start development server
+npm run dev
 
-## Learn More
+# Build for production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a `.env` file with:
 
-## Deploy on Vercel
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+EMAIL_TO=your-email@gmail.com
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 16 (App Router) |
+| UI | React 19, Tailwind CSS 4 |
+| Components | Radix UI (Dialog) |
+| Icons | Lucide React |
+| Validation | Zod |
+| Email | Nodemailer |
+| Language | TypeScript 5 |
+
+## 📦 Performance Optimizations
+
+- ✅ AVIF/WebP image formats with responsive device sizes
+- ✅ Gzip compression enabled
+- ✅ React Strict Mode for best practices
+- ✅ Centralized CSS animations (no duplicate styles)
+- ✅ Intersection Observer for lazy animations
+
+## 📄 License
+
+MIT © Gemuel Sampayan
