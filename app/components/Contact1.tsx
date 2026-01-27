@@ -143,9 +143,9 @@ export default function Contact() {
                         role="alert"
                     >
                         {status.type === "success" ? (
-                            <CheckCircle className="h-5 w-5 flex-shrink-0" />
+                            <CheckCircle className="h-5 w-5 shrink-0" />
                         ) : (
-                            <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                            <AlertCircle className="h-5 w-5 shrink-0" />
                         )}
                         <p>{status.message}</p>
                     </div>

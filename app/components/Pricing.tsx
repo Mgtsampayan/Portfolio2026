@@ -30,7 +30,7 @@ const Pricing: React.FC = () => {
                                 <ul role="list" className="mt-6 space-y-6">
                                     {plan.features.map((feature) => (
                                         <li key={feature} className="flex">
-                                            <Check className="flex-shrink-0 w-6 h-6 text-primary dark:text-primary" aria-hidden="true" />
+                                            <Check className="shrink-0 w-6 h-6 text-primary dark:text-primary" aria-hidden="true" />
                                             <span className="ml-3 text-muted-foreground dark:text-muted-foreground">{feature}</span>
                                         </li>
                                     ))}

@@ -32,7 +32,7 @@ const About: React.FC = () => {
 
 
     return (
-        <section ref={sectionRef} id="about" className="py-20 bg-gradient-to-b from-background to-secondary/10 dark:from-background dark:to-background">
+        <section ref={sectionRef} id="about" className="py-20 bg-linear-to-b from-background to-secondary/10 dark:from-background dark:to-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className={`lg:text-center transition-all duration-800 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
                     <h2 className="text-base text-primary dark:text-primary font-semibold tracking-wide uppercase">About Us</h2>
