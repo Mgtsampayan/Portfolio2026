@@ -17,7 +17,7 @@ export const portfolioFeatures = [
         name: 'Under Development Project to End to end',
         description: 'An innovative new project currently in development: a Chat LLM powered by Gemini. Stay tuned for updates!',
         image: '/images/gemini-2.5-flash.png',
-        link: 'https://gemini-2-5-flash.vercel.app',
+        link: 'https://gemini3-flash.vercel.app',
     },
     {
         name: 'Development is on Progress',
